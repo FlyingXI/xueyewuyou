@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">学业无忧</string>
+    <string name="version">学业无忧 v1.0</string>
+    <string name="introduction">老师用学业无忧,对学生定性分析;家长用学业无忧,
+        轻松了解孩子学习情况;学生用学业无忧,轻松破解作业难题。</string>
+    <string name="help">学业无忧批改老师端，您可以通过批改作业赚取零花钱。</string>
+    <string-array name="gender">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+</resources>

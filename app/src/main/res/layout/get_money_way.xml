@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#0cd6d6">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="提现方式"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:padding="5dp"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0cd6d6"
+            android:padding="5dp"
+            android:src="@drawable/back"
+            />
+
+        <TextView
+            android:id="@+id/about_get_money_way"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现说明"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:padding="5dp"
+            android:onClick="true"
+            android:layout_gravity="right|center_vertical" />
+
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/mgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <RadioButton
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="建设银行: 尾号7856"
+                android:textColor="#2b2727"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:background="@drawable/bg_gray_white"
+                android:shadowColor="#07f1e9"/>
+
+
+
+        <RadioButton
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="支付宝: xxx@163.com"
+            android:textColor="#2b2727"
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:background="@drawable/bg_gold_white"
+            android:shadowColor="#07f1e9"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/updata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_black_blue"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:text="添加银行卡或支付宝"/>
+
+</LinearLayout>
