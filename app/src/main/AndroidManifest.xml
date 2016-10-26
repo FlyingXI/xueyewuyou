@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GetMoneyWayActivity">
+        <activity android:name=".WorkCheck">//WorkCheck
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,25 @@
         <activity android:name=".PassWord"></activity>
         <activity android:name=".MessageCenter"></activity>
         <activity android:name=".IncomeActivity"></activity>
+        <activity android:name=".GetMoneyWayActivity"></activity>
+        <activity android:name=".PersonalCenterActivity"></activity>
+        <activity android:name=".WorkAnswer"></activity>
+        <activity android:name=".ErrorCorrelation"></activity>
+        <activity android:name=".HelpActivity"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".AccountManageActivity"></activity>
+        <activity android:name=".SetActivity"></activity>
+        <activity android:name=".MyWalletActivity"></activity>
+        <activity android:name=".MyWorkActivity"></activity>
+        <activity android:name=".GetMoneyActivity"></activity>
+        <activity android:name=".UpdateActivity"></activity>
+        <activity android:name=".MessageSetActivity"></activity>
+        <activity android:name=".CameraWorkCheckActivity"></activity>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

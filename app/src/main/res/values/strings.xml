@@ -4,8 +4,22 @@
     <string name="introduction">老师用学业无忧,对学生定性分析;家长用学业无忧,
         轻松了解孩子学习情况;学生用学业无忧,轻松破解作业难题。</string>
     <string name="help">学业无忧批改老师端，您可以通过批改作业赚取零花钱。</string>
+    <string name="question">1. “望梅可以止渴，画饼却不能充饥”这说明(      )
+                    \nA．意识的反作用有积极的，也有消极的
+                    \nB．意识的反作用有时有效果，有时没有效果
+                    \nC．意识的能动作用巨大，但受客观条件和客观规律制约
+                    \nD．意识的能动作用总是有限的</string>
+    <string name="answer">解析\n
+            “望梅可以止渴”体现了意识的能动作用,而“画饼却不能充饥”
+        的原因在于画饼属于意识范畴,不能直接对物质进行反作用,因此选项C观点正确;
+        选项A观点正确,但不符合本题材料的要求;选项B、D观点错误.</string>
     <string-array name="gender">
         <item>男</item>
         <item>女</item>
     </string-array>
+    <string-array name="get_money_way">
+        <item>银行卡</item>
+        <item>支付宝</item>
+    </string-array>
+
 </resources>

@@ -14,7 +14,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="消息中心"
+                android:text="收益记录"
                 android:textSize="20dp"
                 android:textColor="#ffffff"
                 android:padding="5dp"
@@ -30,7 +30,7 @@
         </FrameLayout>
 
         <TabHost
-            android:id="@+id/messageTabHost"
+            android:id="@+id/incomeTabHost"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -61,7 +61,7 @@
                     android:layout_weight="0" >
 
                     <LinearLayout
-                        android:id="@+id/message1"
+                        android:id="@+id/income1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
@@ -73,8 +73,15 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="8dp"
                             android:layout_marginRight="8dp"
-                            android:dividerHeight="4dp">
+                            android:dividerHeight="4dp"
+                            android:divider="#00d6d2d2">
                         </ListView>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8px"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:background="#d1cfcf"></View>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -84,7 +91,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/message2"
+                        android:id="@+id/income2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
@@ -96,9 +103,16 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="8dp"
                             android:layout_marginRight="8dp"
-                            android:dividerHeight="4dp">
-
+                            android:dividerHeight="4dp"
+                            android:divider="#00d6d2d2">
                         </ListView>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8px"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:background="#d1cfcf"></View>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -106,20 +120,8 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:text="加载更多......"/>
-
                     </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/message3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                    </LinearLayout>
-
-
                 </FrameLayout>
             </LinearLayout>
         </TabHost>
-
 </LinearLayout>

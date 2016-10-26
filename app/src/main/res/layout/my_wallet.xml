@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="消息设置"
+            android:text="我的钱包"
             android:textSize="20dp"
             android:textColor="#ffffff"
             android:padding="5dp"
@@ -29,140 +29,88 @@
             android:padding="5dp"
             android:src="@drawable/back"
             />
+        <TextView
+            android:id="@+id/income_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="true"
+            android:text="收益记录"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:padding="5dp"
+            android:layout_gravity="right|center_vertical"/>
     </FrameLayout>
-
-    <TabHost
-        android:id="@+id/myTabHost"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#ffff">
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/money"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账户余额"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥ 1,000"
+            android:textSize="25dp"
+            android:textColor="#ec0707"
+            android:layout_marginTop="5dp"/>
 
-            <!-- TabWidget的id属性必须为 @android:id/tabs -->
+    </LinearLayout>
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:orientation="horizontal"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_blue_white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_blue_white"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
 
-            <!-- FrameLayout的id属性必须为 @android:id/tabcontent -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="今日收入(100.00)"
+            android:textSize="18dp"
+            android:textColor="#ffff"
+            android:background="@drawable/bg_black_blue_left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="累计收入(300.00)"
+            android:textSize="18dp"/>
+    </LinearLayout>
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0" >
-
-                <LinearLayout
-                    android:id="@+id/view1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="原始密码:"
-                        android:background="@drawable/bg_blue_white"
-                        android:inputType="numberPassword"
-                        android:padding="8dp"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp">
-
-                        <EditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="验证码："
-                            android:inputType="number"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp"
-                            android:paddingTop="8dp"
-                            android:paddingBottom="8dp"
-                            android:background="@drawable/bg_white_white"
-
-                            />
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:background="@drawable/bg_black_blue"
-                            android:paddingLeft="5dp"
-                            android:paddingTop="6dp"
-                            android:paddingBottom="6dp"
-                            android:text="获取验证码"
-                            android:textSize="20dp"
-                            android:textColor="#ffff"/>
-                    </LinearLayout>
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="新密码："
-                        android:padding="8dp"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:inputType="numberPassword"
-                        android:background="@drawable/bg_white_white"
-                        />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="确认密码："
-                        android:padding="8dp"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:inputType="numberPassword"
-                        android:background="@drawable/bg_white_white"
-                        />
-
-                    <TextView
-                        android:id="@+id/sure"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/bg_black_blue"
-                        android:textColor="#ffffff"
-                        android:textSize="15dp"
-                        android:layout_marginTop="30dp"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="100dp"
-                        android:paddingRight="100dp"
-                        android:text="确定"/>
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/view2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Tab2 Content" />
-
-
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
+    <Button
+        android:id="@+id/get_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_black_blue"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:layout_marginTop="20dp"
+        android:text="马上提现"/>
 
 </LinearLayout>

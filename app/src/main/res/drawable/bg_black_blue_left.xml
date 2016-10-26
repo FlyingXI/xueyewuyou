@@ -3,15 +3,14 @@
               android:shape="rectangle">
     <corners
         android:topLeftRadius="6px"
-        android:topRightRadius="6px"
         android:bottomLeftRadius="6px"
-        android:bottomRightRadius="6px"
         />
     <solid
         android:color="#0cd6d6"/>
 
     <stroke
         android:width="2px"
+        android:color="#0cd6d6"
         />
 
 

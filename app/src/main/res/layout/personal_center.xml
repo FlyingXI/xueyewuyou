@@ -5,21 +5,12 @@
     android:layout_height="match_parent"
     android:gravity="top|center"
     android:theme="@android:style/Theme.NoTitleBar">
-
+<!--导航栏-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#0cd6d6">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="我的钱包"
-            android:textSize="20dp"
-            android:textColor="#ffffff"
-            android:padding="5dp"
-            android:gravity="center"/>
 
         <ImageButton
             android:id="@+id/back"
@@ -29,86 +20,275 @@
             android:padding="5dp"
             android:src="@drawable/back"
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="收益记录"
+        <ImageView
+            android:id="@+id/set"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:onClick="true"
+            android:src="@drawable/set"
             android:textSize="15dp"
             android:textColor="#ffffff"
             android:padding="5dp"
             android:layout_gravity="right|center_vertical"/>
     </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="#ffff">
+        android:background="#0cd6d6">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:src="@drawable/money"/>
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/imagehead1"
+            android:background="@drawable/circular"
+
+            />
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="账户余额"
+            android:text="晴空万里"
+            android:textColor="#ffff"
             android:textSize="20dp"
             android:layout_marginTop="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¥ 1,000"
-            android:textSize="25dp"
-            android:textColor="#ec0707"
-            android:layout_marginTop="5dp"/>
+            android:text="批改老师  已认证"
+            android:textSize="15dp"
+            android:textColor="#ffff"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
 
     </LinearLayout>
 
+<!--作业订单-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/bg_blue_white"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp">
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="#ffff">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我的作业订单"
+            android:textSize="20dp"
+            android:paddingLeft="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#cec7c7"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <!--今日待批改-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:text="今日收入(100.00)"
-            android:textSize="18dp"
-            android:textColor="#ffff"
-            android:background="@drawable/bg_black_blue_left"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:text="今日收入(100.00)"
-            android:textSize="18dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/my_work"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今日待批改"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(2)"
+                        android:textColor="#0cd6d6"/>
+                </LinearLayout>
+        </LinearLayout>
+            <!--今日已完成-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/my_work"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今日已完成"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(2)"
+                        android:textColor="#0cd6d6"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--历史订单-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="25dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/my_work"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="历史订单"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(2)"
+                        android:textColor="#0cd6d6"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
+<!--选项-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+            <!--查看全部作业-->
+            <LinearLayout
+            android:id="@+id/work_look"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_white"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:onClick="true"
+            android:layout_marginTop="20dp">
 
-    <Button
-        android:id="@+id/get_money"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_black_blue"
-        android:textColor="#ffff"
-        android:textSize="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="80dp"
-        android:paddingRight="80dp"
-        android:layout_marginTop="20dp"
-        android:text="马上提现"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/work_look"
+                android:layout_marginLeft="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="查看全部作业"
+                android:textColor="#716c6c"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:background="#0000"
+                android:src="@drawable/go"/>
+        </LinearLayout>
+            <!--资料设置-->
+            <LinearLayout
+            android:id="@+id/account_manage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_white"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:onClick="true"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/account_manage"
+                android:layout_marginLeft="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="资料设置"
+                android:textColor="#716c6c"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:background="#0000"
+                android:src="@drawable/go"/>
+        </LinearLayout>
+            <!--我的钱包-->
+            <LinearLayout
+            android:id="@+id/my_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_white"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:onClick="true"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/my_wallet"
+                android:layout_marginLeft="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="我的钱包"
+                android:textColor="#716c6c"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:background="#0000"
+                android:src="@drawable/go"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

@@ -82,7 +82,8 @@
             android:button="@null"
             android:drawableRight="@android:drawable/btn_radio"
             android:background="@drawable/bg_gold_white"
-            android:shadowColor="#07f1e9"/>
+            android:shadowColor="#07f1e9"
+            android:checked="true"/>
 
     </RadioGroup>
 
