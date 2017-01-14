@@ -92,8 +92,8 @@ public class MessageCenter extends Activity{
             View view = tabHost.getTabWidget().getChildAt(i);
             TextView tv = (TextView) tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
             tv.setTextSize(16);
-            tv.setTypeface(Typeface.SERIF, 2); // 设置字体和风格
-            tv.setTypeface(Typeface.SERIF, 2); // 设置字体和风格
+//            tv.setTypeface(Typeface.SERIF, 2); // 设置字体和风格
+//            tv.setTypeface(Typeface.SERIF, 2); // 设置字体和风格
             RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) tv.getLayoutParams();
             params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 0); //取消文字底边对齐
             params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE); //设置文字居中对齐

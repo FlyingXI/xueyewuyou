@@ -78,7 +78,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="我的作业订单"
-            android:textSize="20dp"
+            android:textSize="18dp"
+            android:layout_marginTop="5dp"
             android:paddingLeft="15dp" />
         <View
             android:layout_width="match_parent"

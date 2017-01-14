@@ -13,6 +13,9 @@
             “望梅可以止渴”体现了意识的能动作用,而“画饼却不能充饥”
         的原因在于画饼属于意识范畴,不能直接对物质进行反作用,因此选项C观点正确;
         选项A观点正确,但不符合本题材料的要求;选项B、D观点错误.</string>
+    <string name="take">take</string>
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="subtitle">Sometimes tolerance is not a virtue.</string>
     <string-array name="gender">
         <item>男</item>
         <item>女</item>

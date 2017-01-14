@@ -32,7 +32,7 @@ public class MyAdapterH extends SimpleAdapter {
         final int mPosition = position;
         convertView = super.getView(position, convertView, parent);
         final TextView bt1 = (TextView) convertView
-                .findViewById(R.id.swork_bt);// id为你自定义布局中按钮的id
+                .findViewById(R.id.hwork_bt);// id为你自定义布局中按钮的id
         bt1.setTag(position);
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -44,7 +44,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/bg_gray_gray"
-        android:text="开户人"/>
+        android:hint="开户人"/>
 
     <EditText
         android:id="@+id/number_bankcard"
@@ -57,7 +57,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/bg_gray_gray"
-        android:text="卡号"/>
+        android:inputType="number"
+        android:hint="卡号"/>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -95,7 +96,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/bg_gray_gray"
-        android:text="开户行"/>
+        android:hint="开户行"/>
 
     <Button
         android:id="@+id/add_bankcard"

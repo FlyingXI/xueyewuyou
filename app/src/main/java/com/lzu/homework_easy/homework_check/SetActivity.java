@@ -6,7 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class SetActivity extends Activity {
+import com.zxinsight.mlink.annotation.MLinkDefaultRouter;
+import com.zxinsight.mlink.annotation.MLinkRouter;
+
+@MLinkRouter(keys={"first_for"})
+public class SetActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -82,13 +82,12 @@
             android:button="@null"
             android:drawableRight="@android:drawable/btn_radio"
             android:background="@drawable/bg_gold_white"
-            android:shadowColor="#07f1e9"
-            android:checked="true"/>
+            android:shadowColor="#07f1e9"/>
 
     </RadioGroup>
 
     <Button
-        android:id="@+id/updata"
+        android:id="@+id/add_get_monet_way"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

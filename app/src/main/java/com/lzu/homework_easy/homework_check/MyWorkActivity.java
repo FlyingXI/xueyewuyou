@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -58,8 +59,10 @@ public class MyWorkActivity extends Activity {
         viewList = new ArrayList<View>();// 将要分页显示的View装入数组中
         viewList.add(view1);
         viewList.add(view2);
-        ListView list1 = (ListView) view1.findViewById(R.id.list1);
-        ListView list2 = (ListView) view2.findViewById(R.id.list1);
+        viewList.add(view3);
+        final ListView list1 = (ListView) view1.findViewById(R.id.list1);
+        final ListView list2 = (ListView) view2.findViewById(R.id.list1);
+
 
 
         PagerAdapter pagerAdapter = new PagerAdapter() {
@@ -103,6 +106,9 @@ public class MyWorkActivity extends Activity {
                     case 1:total.setTextColor(Color.parseColor("#716c6c"));
                         noCheck.setTextColor(Color.parseColor("#0cd6d6"));
                         checked.setTextColor(Color.parseColor("#716c6c"));break;
+                    case 2:total.setTextColor(Color.parseColor("#716c6c"));
+                        noCheck.setTextColor(Color.parseColor("#716c6c"));
+                        checked.setTextColor(Color.parseColor("#0cd6d6"));break;
                     default:break;
                 }
 
@@ -121,28 +127,34 @@ public class MyWorkActivity extends Activity {
 
 
     //家庭作业
-        List<Map<String,Object>> listItem1 = new ArrayList<Map<String,Object>>() {};
-        setItem(header,name,school,subject,time_day,time,listItem1);
-        SimpleAdapter simpleAdapter1 = new SimpleAdapter(this,listItem1,
-                R.layout.study_hwork_item,
-                new String[]{"header","name","school","subject"
-                        ,"time_day","time"},
-                new int[]{R.id.hwork_header,R.id.hwork_name,R.id.hwork_school,
-                        R.id.hwork_subject,R.id.hwork_time_day,R.id.hwork_time});
-        list1.setAdapter(simpleAdapter1);
+//        List<Map<String,Object>> listItem1 = new ArrayList<Map<String,Object>>() {};
+//        setItem(header,name,school,subject,time_day,time,listItem1);
+//        SimpleAdapter simpleAdapter1 = new SimpleAdapter(this,listItem1,
+//                R.layout.study_hwork_item,
+//                new String[]{"header","name","school","subject"
+//                        ,"time_day","time"},
+//                new int[]{R.id.hwork_header,R.id.hwork_name,R.id.hwork_school,
+//                        R.id.hwork_subject,R.id.hwork_time_day,R.id.hwork_time});
+//        list1.setAdapter(simpleAdapter1);
 
 
 //未批改作业
-        List<Map<String,Object>> listItem3 = new ArrayList<Map<String,Object>>() {};
-        setItem(header,name,school,subject,time_day,time,sh_work_type,work_type,reward,listItem3);
-        SimpleAdapter simpleAdapter2 = new SimpleAdapter(this,listItem3,
+        List<Map<String,Object>> listItem1 = new ArrayList<Map<String,Object>>() {};
+        setItem(header,name,school,subject,time_day,time,sh_work_type,work_type,reward,listItem1);
+        final MyAdapterN simpleAdapter2 = new MyAdapterN(this,listItem1,
                 R.layout.study_ncheck_item,
                 new String[]{"header","name","school","subject"
                         ,"time_day","time","sh_type","work_type", "reward"},
                 new int[]{R.id.ncheck_header,R.id.ncheck_name,R.id.ncheck_school,
                         R.id.ncheck_subject,R.id.ncheck_time_day,R.id.ncheck_time,
                         R.id.ncheck_sh_type,R.id.ncheck_work_type,R.id.ncheck_reward});
-        list2.setAdapter(simpleAdapter2);
+        list1.setAdapter(simpleAdapter2);
+        list1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                simpleAdapter2.getView(position, view, list1);
+            }
+        });
 
  //返回键
         ImageButton back = (ImageButton) findViewById(R.id.back);

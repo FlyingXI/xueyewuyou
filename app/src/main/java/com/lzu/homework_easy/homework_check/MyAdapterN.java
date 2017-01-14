@@ -1,6 +1,7 @@
 package com.lzu.homework_easy.homework_check;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,17 +33,14 @@ public class MyAdapterN extends SimpleAdapter {
         final int mPosition = position;
         convertView = super.getView(position, convertView, parent);
         final TextView bt1 = (TextView) convertView
-                .findViewById(R.id.hwork_bt);// id为你自定义布局中按钮的id
+                .findViewById(R.id.ncheck_check);// id为你自定义布局中按钮的id
         bt1.setTag(position);
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                    bt1.setTextColor(Color.WHITE);
-                    bt1.setBackgroundResource(R.drawable.bg_gray_gray);
-                    Toast.makeText(context, "该作业订单已添加", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(context,CameraWorkCheckActivity.class);
-//                context.startActivity(intent);
+                Intent intent = new Intent(context,CameraWorkCheckActivity.class);
+                context.startActivity(intent);
 
 
             }
